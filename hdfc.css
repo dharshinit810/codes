@@ -1,0 +1,185 @@
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    background: #FAFAFA;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+
+  .productContainer {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  
+
+  .imageContainer {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .detailContainer {
+    position: absolute;
+    width: 100%; 
+    top: 0;
+    bottom: 0;
+    color: #ffffff;
+    background: none; 
+    box-sizing: border-box; 
+    z-index: 2;
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+  }
+  
+  .contentContainer {
+    position: relative; 
+    width: 50%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: center; 
+    padding: 20px; 
+    z-index: 3; 
+    text-align: center; 
+  }
+
+
+  
+  .titleContainer {
+    font-family: "ProximaNova-Regular", "Lato-Black", Helvetica, sans-serif;
+    font-weight:bold;
+    font-size : 5.5vh;
+    margin-bottom:10px;
+  }
+  
+  .messageContainer {
+    font-family: "ProximaNova-Regular", "Lato-Medium", Helvetica, sans-serif;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    font-size:20px;
+  }
+  
+  .detailContainer .banner-button {
+    display: inline-block;
+    font-family: "ProximaNova-Regular", "Lato-Medium", Helvetica, sans-serif;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-image: linear-gradient(to left,#ea5321,#f08424) !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px;
+    text-decoration: none;
+    text-transform:uppercase;
+  }
+  
+  .detailContainer .banner-button:hover {
+    background-color: #d21f22;
+    transform: scale(1.05);
+  }
+  
+  .detailContainer .banner-button:active {
+    transform: scale(0.95);
+  }
+  
+  .dots-container {
+    position: absolute; 
+    left:95%;  
+    bottom:20px;
+    transform: translateX(-50%);  
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    z-index: 5;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #c4c0c0;
+    cursor: pointer;
+    list-style: none;
+  }
+  
+  .dot.active {
+    background-color: #e32228;
+  }
+  @media (max-width: 480px) {
+  
+    .productContainer {
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+  
+    .detailContainer {
+      position: static;
+      width: 100%; 
+      padding: 20px; 
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.9); 
+      color: #000; 
+      height: auto;
+    }
+
+    .contentContainer{
+      width:100%;
+    }
+  
+    .titleContainer {
+      font-size: 16px !important;
+      margin-bottom: 5px;
+    }
+  
+    .messageContainer {
+      font-size: 14px !important;
+      border-bottom: 5px;
+    }
+  
+    .detailContainer .banner-button {
+      font-size: 12px;
+      margin-top: 10px;
+      padding:5px 10px;
+    }
+    .dots-container{
+      bottom:30%;
+    }
+  }
+  @media (max-width: 768px) {
+    .dots-container{
+      bottom:30%;
+    }
+    .titleContainer{
+      font-size:30px;
+    }
+    .messageContainer{
+      font-size:16px;
+    }
+    .detailContainer .banner-button {
+      font-size: 12px;
+      margin-top: 10px;
+      padding:10px 20px;
+    }
+  }
+      

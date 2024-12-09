@@ -1,0 +1,70 @@
+/* Container for all banners */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  /* Sliding product banners */
+  .slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    animation: slide 3s infinite;
+  }
+  
+  
+  /* Individual product container */
+  .product-container {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+.product-container:hover {
+    transform: scale(1.02);
+    animation-play-state: paused; /* Pause animation on hover */
+  }
+  
+  /* Content inside product banners */
+  .content-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .product-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .cta-button:hover {
+    background: #0056b3;
+  }
+
+  
+  
